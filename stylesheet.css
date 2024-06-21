@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+nav {
+    background-color: black;
+}
+nav a {
+    color: #fff;
+}
+.content {
+    background: #202020;
+}
+section {
+    float: left;
+}
+aside {
+    float: right;
+}
+footer {
+    clear: both;
+}
+#elementos {
+    position: relative;
+}
+#chamas, #gelo {
+    position: absolute;
+}
+@keyframes animacaoChamas {
+  /* Regras da animação */
+}
+@keyframes animacaoGelo {
+  /* Regras da animação */
+}
+#chamas {
+  animation: animacaoChamas 2s infinite;
+}
+#gelo {
+  animation: animacaoGelo 2s infinite;
+}
