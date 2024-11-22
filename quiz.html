@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - As Crônicas de Gelo e Fogo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz - As Crônicas de Gelo e Fogo</h1>
+        <div id="quiz"></div>
+        <button onclick="quiz()">Executar</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function quiz() {
+            let pontos = 0;
+
+            const perguntas = [
+                { pergunta: "Qual é o lema da Casa Stark?", resposta: "O Inverno Está Chegando" },
+                { pergunta: "Quem é conhecido como a Mãe dos Dragões?", resposta: "Daenerys Targaryen" },
+                { pergunta: "Quem é conhecido como Espada da Manhã?", resposta: "arthur dayne" },
+                { pergunta: "Quem é o rei no início dos livros da saga?", resposta: "robert baratheon" },
+                { pergunta: "Qual o lema da Casa Greyjoy?", resposta: "nós não semeamos" },
+                { pergunta: "Qual o nome do primeiro rei dos Sete Reinos?", resposta: "aegon targaryen" },
+                { pergunta: "Qual alcunha Robert Baratheon recebeu após a vitória na Batalha do Tridente?", resposta: "demônio do tridente" },
+                { pergunta: "Qual o último reino a integrar os Sete Reinos?", resposta: "dorne" },
+                { pergunta: "Qual a alcunha de Jaime Lannister?", resposta: "o regicida" },
+                { pergunta: "Qual a alcunha de Barristan Selmy?", resposta: "o ousado" }
+            ];
+
+            for (let i = 0; i < perguntas.length; i++) {
+                let resposta = prompt(perguntas[i].pergunta);
+                if (resposta && resposta.toLowerCase() === perguntas[i].resposta.toLowerCase()) {
+                    pontos += 10;
+                    alert("Resposta correta! Você ganhou 10 pontos.");
+                } else {
+                    pontos -= 5;
+                    alert("Resposta incorreta! Você perdeu 5 pontos.");
+                }
+            }
+
+            alert("Fim do quiz! Sua pontuação final é: " + pontos + " ponto(s).");
+        }
+    </script>
+</body>
+</html>
